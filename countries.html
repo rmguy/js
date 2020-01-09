@@ -5,48 +5,32 @@
 <style>
 .legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.5; }
 </style>
+<style>
+.leaflet-control-layers-expanded {
+  color: white;
+  background-color: transparent;
+}
+</style>
 <script>		
+	// Creating a map object
+	// This is a leaflet api call. Arg 1 is the div id above.  
+    var layer = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png', {
+		subdomains: 'abcd',
+		maxZoom: 19
+	});
+	
 	// Creating map options
 	var mapOptions = {
 		// Lat/long
 		center: [41, 12],
 		// zoom level of map
         zoom: 2,
-	attributionControl: false
+		attributionControl: false,
+		layers: [layer]
 	}
-	// Creating a map object
-	// This is a leaflet api call. Arg 1 is the div id above.  
     var map = new L.map('map', mapOptions);
-    var layer = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png', {
-		subdomains: 'abcd',
-		maxZoom: 19
-	});
-	// Adding layer to the map
-	map.addLayer(layer);
-   
-    // Creating a marker
-	// L.marker([17.385044, 78.486671]).addTo(map);
-
-	var air_brazil = L.marker([-14.2350, -51.9253]).bindPopup('ERJ-145(3).');
-	var air_canada = L.marker([]).bindPopup('PT6(85), PW100(112).');
-	var air_france = L.marker([]).bindPopup('Mirage-2000-5(49), Rafale(?)');
-    var air_germany = L.marker([]).bindPopup('Do-228MP(52)');
-	var air_russia = L.marker([]).bindPopup('Su-30MK(140), Mig-29SMT/Fulcrum-F(92)');
-
-	var air_cities = L.layerGroup([air_brazil]);
-
-	var missile_france = L.marker([46.2276, 2.2137]).bindPopup('Military aircraft.');
-	var missile_cities = L.layerGroup([missile_france]);
-
-	var baseMap = {
-			"<span style='color: gray'>Defense FDI(in m$)</span>": map
-	}
-
-	var overlayMap = {
-		"air": air_cities,
-		"missile": missile_cities
-	}
-
+    
+    // Coloring countries
 	function getColor(d) {
     	return d > 10000 ? '#045a8d' :
            d > 5000  ? '#2b8cbe' :
@@ -66,29 +50,50 @@
 		};
 	}
 
+	L.geoJson(countriesData, {style: style}).addTo(map)
 
-		var legend = L.control({position: 'bottomright'});
+    // Legend creation
+	var legend = L.control({position: 'bottomright'});
 
-		legend.onAdd = function (map) {
-
-			var div = L.DomUtil.create('div', 'info legend'),
-				grades = [0, 10, 100, 500, 999, 5000, 10000],
-				labels = [];
+	legend.onAdd = function (map) {
+		var div = L.DomUtil.create('div', 'info legend'),
+			grades = [0, 10, 100, 500, 999, 5000, 10000],
+			labels = [];
 
 			// loop through our density intervals and generate a label with a colored square for each interval
-			for (var i = 0; i < grades.length; i++) {
-				div.innerHTML +=
-					'<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-					grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + 'm $' + '<br>' : '+');
-			}
+		for (var i = 0; i < grades.length; i++) {
+			div.innerHTML +=
+				'<i style="background:' + getColor(grades[i] + 1) + '"></i><span style="color: white">' +
+				grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '</span><br>' : '+');
+		}
+		return div;
+	};
 
-			return div;
-		};
+	legend.addTo(map);
 
-		legend.addTo(map);
+    // Creating Layers for markers
+	var air_brazil = L.marker([-14.2350, -51.9253]).bindPopup('ERJ-145(3).');
+	var air_canada = L.marker([]).bindPopup('PT6(85), PW100(112).');
+	var air_france = L.marker([]).bindPopup('Mirage-2000-5(49), Rafale(?)');
+    var air_germany = L.marker([]).bindPopup('Do-228MP(52)');
+	var air_russia = L.marker([]).bindPopup('Su-30MK(140), Mig-29SMT/Fulcrum-F(92)');
 
-	L.geoJson(countriesData, {style: style}).addTo(map)
+	var air_cities = L.layerGroup([air_brazil]);
+
+	var missile_france = L.marker([46.2276, 2.2137]).bindPopup('Military aircraft.');
+	var missile_cities = L.layerGroup([missile_france]);
+
+	var baseMap = {
+			"Defense FDI (in m$)": layer
+	}
+
+	var overlayMap = {
+		"Fighter suppliers": air_cities,
+		"Missile suppliers": missile_cities
+	}
+
 	L.control.layers(baseMap, overlayMap, {collapsed: false}).addTo(map);
+
 	// <script src="https://cdn.jsdelivr.net/gh/rmguy/js/countries_weapons.js"></script>
 </script>
 
