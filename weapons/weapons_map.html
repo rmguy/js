@@ -33,9 +33,9 @@
 		attributionControl: false,
 		layers: [layer]
 	}
-    var map = new L.map('map', mapOptions);
+  var map = new L.map('map', mapOptions);
     
-    // Coloring countries
+  // Coloring countries
 	function getColor(d) {
     	return d > 10000 ? '#045a8d' :
            d > 5000  ? '#2b8cbe' :
@@ -57,7 +57,7 @@
 
 	L.geoJson(countriesData, {style: style}).addTo(map)
 
-    // Legend creation
+  // Legend creation
 	var legend = L.control({position: 'bottomleft'});
 
 	legend.onAdd = function (map) {
@@ -65,9 +65,8 @@
 			grades = [10, 100, 500, 1000, 5000, 10000],
 			labels = ['<span style="color:white">Defense FDI into India (m$)</span><br>'];
 
-			// loop through our density intervals and generate a label with a colored square for each interval
+		// loop through our density intervals and generate a label with a colored square for each interval
 		for (var i = 0; i < grades.length; i++) {
-			// div.innerHTML +=
 			labels.push(
 				'<i style="background:' + getColor(grades[i] + 1) + '"></i><span style="color: white">' +
 				grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '</span><br>' : '+'));				
@@ -78,7 +77,7 @@
 
 	legend.addTo(map);
 
-    	// Creating Layers for markers
+  // Creating Layers for markers
 	var air_brazil_marker = L.marker([-14.2350, -51.9253])
 	var air_brazil = air_brazil_marker.bindPopup('ERJ-145(3)');
 	air_brazil_marker.on('mouseover', function (e) {
