@@ -15,7 +15,7 @@ Breq, over and out."
 
 ---
 
-The sky is covered by a pink layer of cotton candy by the time I get there. It's falling down like snowflakes from a sunny tranquil sky, all beautiful and peaceful like.  But peaceful like and peaceful are two different things, and there's nothing peaceful about Bethod's fleet of cinereal destroyers unleashing a nuclear winter on the world. 
+The sky is covered by a pink layer of cotton candy by the time I get there. It's falling down like snowflakes from the tranquil empyrean, all beautiful and peaceful like.  But peaceful like and peaceful are two different things, and there's nothing peaceful about Bethod's fleet of cinereal destroyers unleashing the nuclear winter on this world. 
 
 You have no idea who I am, or why I grab you, but I grab you. I drop an anchor in my timeline so I can return. Then we jump to the century 40k. 
 
@@ -84,7 +84,7 @@ Your pupils dilate in recognition as I walk up to the lurching woman and lift he
 
 "Your bio weapon has all but eradicated my kind. I am among the last few left. Hear my message: Today we return the favor."
 
-By this time the Luciferium has made its way into your mouth, nasal tract and lungs. You fall to your knees coughing blood as it enters the condensation phase. It's like someone's opened your hole and fired a shotgun cartridge full of ballistic gel into your left eye. 
+By this time the Luciferium has made its way into your mouth, nasal tract and lungs. You fall to your knees coughing blood as it enters the condensation phase. The human skull doesn't have much spare room for a rapidly solidifying gas, so your brains start leaking out your ears. It's like someone opened your hole and fired a shotgun cartridge full of ballistic gel into your left eye. Turns out you're not such an airhead after all. 
 
 Bethod wanted a slaughter. 
 I wanted to watch you die. 
@@ -128,11 +128,11 @@ function spThreeOnClick() {
 [Author&#39;s annotations appear in brackets].</em></p>
 <p>Current theories on time paradoxes are summarized thus: </p>
 <ol>
-<li><p>The present is a result of specific choices made in the past. If you go back in time and kill your grandfater, you will cease to exist. [Back to the future time travel]</p>
+<li><p>The present is a result of specific choices made in the past. If you go back in time and kill your grandfater, you will cease to exist. <em>[Back to the future time travel]</em></p>
 </li>
-<li><p>The current present is a result of specific choices made in the current past. If you go back in time and kill your grandfather, there is a branching of the timeline. A new reality where you no longer exist is created. [Rick and Morty time travel]</p>
+<li><p>The current present is a result of specific choices made in the current past. If you go back in time and kill your grandfather, there is a branching of the timeline. A new reality where you no longer exist is created. <em>[Rick and Morty time travel]</em></p>
 </li>
-<li><p>The current present is a linear combination of the past. If an event exists that would change the past, the probability of that event occuring is zero. In other words, time is a fixed path where everything happens for a reason. If time travel is permitted, it implies that time travel is part of the linearity. [Harry Potter time travel]</p>
+<li><p>The present is a linear combination of the past. If an event exists that would change the past, the probability of that event occuring is zero. In other words, time is a fixed path where everything happens for a reason. If time travel is permitted, it implies that time travel preserves the linearity. <em>[Harry Potter time travel]</em></p>
 </li>
 </ol>
 <p>We interviewed Brequerine Abaddon, an aspiring scholar in astro-physics from Proxima B, and she gave us a fourth theory. </p>
@@ -141,7 +141,7 @@ function spThreeOnClick() {
 <p>&quot;Breq&quot;</p>
 <p>&quot;The answer to your first question is yes. We travel forwards all the time. Assuming you meant can we <em>jump</em> the timeline, that answer is Yes too. We can jump, as long as we return. We can loop.&quot;</p>
 <p>&quot;A Time Loop.. interesting.. can you elaborate?&quot;</p>
-<p>&quot;It&#39;s like the universe is govered by equations that preserve a certain equilibrium. One of the recurring variables in these equations is space, and another is time. The space/time continuity. </p>
+<p>&quot;It&#39;s like the universe is govered by equations that preserve a certain equilibrium. One of the recurring variables in these equations is space, and another is time. The space/time continium. </p>
 <p>Typically, time is a progressing constant in these equations, meaning it moves forwards in predictable increments. The equations are governed by the space variable. However, we <em>can</em> manipulate time, as long as the output of the equation remains the same.&quot;</p>
 <p>&quot;This is just like the third theory then?&quot;</p>
 <p>&quot;Similar. The third theory is called Novikov Self-Consistency. The main difference is this: if you commit any.. atrocities.. that might change the output of an equation, the space variable changes drastically and re-balances. To put it simply, you could end up as many light-years away as the time you travelled to decrease the probability that your actions have a causal effect.&quot;</p>
@@ -149,7 +149,7 @@ function spThreeOnClick() {
 <p>&quot;If the probability of you doing so is high..&quot;</p>
 <p>&quot;Err.. yes, if the probability of me killing my grandfather is high.. I could travel back a day and find myself elsewhere?&quot;</p>
 <p>&quot;Correct. Like Dysnomia without a fusion engine Elsewhere.&quot;</p>
-<p>&quot;Haha, If I plan to save the world I&#39;ll remember to pack my vacation clothes.&quot;</p>
+<p>&quot;Ha ha ha, if I plan to save the world I&#39;ll remember to pack my vacation clothes then!&quot;</p>
 <p>&quot;I&#39;ve heard soccer is more fun at half G. Pack accordingly.&quot;</p>
 </div>
 
@@ -158,7 +158,7 @@ function spThreeOnClick() {
 <button onclick="spTwoOnClick()" id="spoilerButtonTwo" style="display:block;opacity:1;background-color:Transparent; color:grey; border:none;">View spoiler (Drawing: <strong><em>Bethod wants a slaughter</strong></em>)</button>
 
 <div id="spoiler2" style="display:none">
-<img style="padding-right:100%;padding-bottom:20px;padding-top:20px" align="left" width=100% height=100% src=https://user-images.githubusercontent.com/3627706/79009650-860f3d80-7b4f-11ea-8763-9c67b192b89f.jpg alt="Drawings. Mail me if it doesn't show up: 87profligate@gmail.com" />
+<img style="padding-right:100%;padding-bottom:20px;padding-top:20px" align="left" width=100% height=100% src=https://user-images.githubusercontent.com/3627706/80384603-b6cad300-88c2-11ea-8a08-ef0cf83414fb.jpg alt="Drawings. Mail me if it doesn't show up: 87profligate@gmail.com" />
 </div>
 
 ---
@@ -166,5 +166,49 @@ function spThreeOnClick() {
 <button onclick="spOneOnClick()" id="spoilerButtonTwo" style="display:block;opacity:1;background-color:Transparent; color:grey; border:none;">View spoiler (Drawing: <strong><em>A nonsensical scene</em></strong>)</button>
 
 <div id="spoiler1" style="display:none">
-<img style="padding-right:100%;padding-bottom:20px" align="left" width=100% height=100% src=https://user-images.githubusercontent.com/3627706/79009650-860f3d80-7b4f-11ea-8763-9c67b192b89f.jpg alt="Drawings. Mail me if it doesn't show up: 87profligate@gmail.com" />
+<img style="padding-right:100%;padding-bottom:20px" align="left" width=100% height=100% src=https://user-images.githubusercontent.com/3627706/80384660-c9450c80-88c2-11ea-942b-f3f1e3d2fd1e.jpg alt="Drawings. Mail me if it doesn't show up: 87profligate@gmail.com" />
 </div>
+
+---
+
+Appendix
+
+I spent a few hours inventing an inter-stellar routing protocol only to come up
+with something exactly like BGP. The problem is galactically consistent
+timestamps. Without these, you need sequence numbers. With sequence numbers, you
+need transmission control. With these, well, how does everyone measure time in
+the Galaxy without error? One answer is by measuring the wavelength decay of 
+ambient cosmic noise since the Big Bang. If the scope of error is O(years) and 
+the magnitude represented is O(lightyears) one could use them for route conflict
+resolution. Maybe? The exact numbers in the timestamps still don't make sense of
+course, other than to show that one message was received before the other, and
+that everyone in the Galaxy would agree. 
+
+A few days went by playing with ideas of why Breq couldn't just save her "kind"
+by going back in time and deflecting the Voyager. The easy/lazy option is that 
+she and Bethod went off the rails. Another option was that she and Bethod were 
+already light years away, closer to earth, when they felt the blast from 
+Alpha Centauri and figured it had to be the Voyager. Since they were tracking
+the Voyager's space dust back to its source, they could time travel (but not
+space travel) and turn it around right then. Yet another option was to have
+Bethod fulfill a contract to attack earth, adultrate the Voyager with a bio
+weapon that takes out Breq's village, and use this as justification to attack 
+earth in front of a United Galactic Council. In this version Breq goes nuts, 
+goes back in time, kills Bethod, diverts the Voyager and executes both 
+humanity's regression and the Luciferium plot 40k years later. 
+
+My favorite variation of the plot is still that the Voyager was a sociological 
+weapon, and Breq discovered something she didn't want to give up by diverting 
+it from Proxima.  
+
+I am fascinated by the idea of a Lunar Penal colony. I almost wanted to set the
+stage on Eris and its moon Dystopia, but the timelines required for humanity's
+cryogenic resuscitation didn't work out (i.e it takes about the age of some good
+whiskey for light to travel from Pluto to Earth). I'm still not sure why an
+aspiring phd-scholar would end up on a Penal colony though, maybe she fucked up 
+her thesis?
+
+---
+
+Feel free to reproduce this story in whole or part without attributing the source.
+
