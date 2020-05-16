@@ -1,0 +1,19 @@
+<head>
+    <link rel="stylesheet" href="plot.css"></link>
+    <script src="https://unpkg.com/d3@3/d3.min.js"></script>
+    <script src="https://unpkg.com/function-plot@1/dist/function-plot.js"></script>
+    <script src="plot.js"></script>
+    <body onLoad="plot()">
+        <section id="plot">
+            <div id="func"></div>
+        </section>
+        <section id="plotSettings"> 
+            <label for="color"> Color: </label>
+            <input type=color id="color" onchange="plot();"></input>
+            <p></p>
+            <label for="function"> Function: </label>
+            <input type=text value="sin(x)" id="function" onchange="plot();"></input> 
+            <p></p>
+        </section>
+    </body>
+</head>

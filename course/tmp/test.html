@@ -1,0 +1,24 @@
+<script>
+function foo(){
+    console.log("This is foo");
+    var mouseoverDiv = document.createElement("div");
+    mouseoverDiv.setAttribute('id', 'mouseover');
+    document.body.appendChild(mouseoverDiv);
+    document.getElementById("mouseover").onmousemove = 
+        function onMouseMove(event) {
+            console.log("This is the point in the event " + event.point);
+        }
+}
+</script>
+<style>
+#mouseover {
+    border: 5px solid black;
+    width: 50px;
+    height: 50px;
+}
+</style>
+<head>
+    <body>
+        <button onClick="foo()">this is test </button>
+    </body>
+</head>

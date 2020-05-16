@@ -1,0 +1,9 @@
+#divstyle {
+  width: 22px;
+  height: 33px;
+  background-image: url("https://mainline.i3s.unice.fr/mooc/marioSprite.png");
+  border-color: red;
+  border-width: 1px;
+  border-style: solid;
+  margin-top: 2px;
+}
