@@ -56,4 +56,19 @@ collapse.
 
 ## Dark Energy
 
+* Brain Schmidt and Saul Perlmutter
+* Supernovae as standard candles 
+* If redshift vs distance plot shows redshift increasing w/ distance, it means
+  we're decelerating. Redshift decreases.
+* Initially matter density is high so matter gravity is high. Slowly it drops as
+  expansion occurs till it drops to lower than the more constant vacuum desnity.
+* Vacuum energy or mass energy is the dominating component of the accelerating
+  universe. Dark matter and normal matter pull it together. 
+* Best firt for data is that `p_vac = 2.2 p_matter` 
+
+## Summary 
+
+* Universe will double is size (exponential expansion)
+* Thing farther away will move faster
+* Things moving faster than light leave our viewable region 
 
