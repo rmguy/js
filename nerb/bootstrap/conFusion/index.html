@@ -85,6 +85,82 @@
     </div>
   </div>
 
+  <div id="reservationModal" class="modal fade" role="dialog">
+    <!-- modal-dialog: card style modal, dismissable by clicking outside -->
+    <div class="modal-dialog modal-lg" role="document">
+      <!-- modal-content: non-txp bg, rounded borders -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- Don't need rows/cols inside the modal, it's modal styled -->
+          <h5 class="modal-title">Reserve a Table</h5>
+          <!-- data-dismiss dismisses the modal, "close" is a nice shaded button -->
+          <button class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label" for="inline-radios">Number of Guests</label>
+              <div class="col-sm-9" id="inline-radios">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" name="inlineRadios" id="inlineRadio1" type="radio" value="1">
+                  <label class="form-check-label" for="inlineRadio1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" name="inlineRadios" id="inlineRadio1" type="radio" value="2">
+                  <label class="form-check-label" for="inlineRadio1">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" name="inlineRadios" id="inlineRadio1" type="radio" value="3">
+                  <label class="form-check-label" for="inlineRadio1">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" name="inlineRadios" id="inlineRadio1" type="radio" value="4">
+                  <label class="form-check-label" for="inlineRadio1">4</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" name="inlineRadios" id="inlineRadio1" type="radio" value="5">
+                  <label class="form-check-label" for="inlineRadio1">5</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" name="inlineRadios" id="inlineRadio1" type="radio" value="6">
+                  <label class="form-check-label" for="inlineRadio1">6</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="smokingPreference" class="col-sm-3 col-form-label">Selection</label>
+              <!-- data-toggle: button makes them act like normal buttons on-click, not radios -->
+              <!-- btn-group: smacks the buttons together -->
+              <div class="btn-group col-sm-9" data-toggle="buttons" id="smokingPreference">
+                <label class="form-check-label btn btn-success" for="non-smoking">Non-Smoking
+                  <input class="form-check-input invisible" type="radio" name="smokingOption" id="non-smoking">
+                </label>
+                <label class="form-check-label btn btn-danger" for="smoking">Smoking
+                  <input class="form-check-input invisible" type="radio" name="smokingOption" id="smoking">
+                </label>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="dateandtime" class="col-sm-3 col-form-label">Date and Time</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" placeholder="Date"></input>
+              </div>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" placeholder="Time"></input>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <button type="submit" class="btn btn-secondary">Cancel</button>
+                <button type="submit" class="btn btn-primary">Reserve</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <header class="jumbotron">
     <div class="container">
       <div class="row row-header">
@@ -97,8 +173,8 @@
           <img src="img/logo.png" class="img-fluid">
         </div>
         <div class="col-12 col-sm-3 align-self-center">
-          <a href="#reservationCard" role="button" class="btn btn-warning btn-block" data-toggle="tooltip"
-            data-html="true" title="Or Call us at <br><strong>+8783428734</strong></br>" data-placement="bottom">Reserve
+          <a href="#reservationCard" role="button" class="btn btn-warning btn-block" data-toggle="modal"
+            data-target="#reservationModal" data-placement="bottom">Reserve
             Table</a>
         </div>
       </div>
@@ -147,12 +223,24 @@
             <li data-target="#mycarousel" data-slide-to="1"></li>
             <li data-target="#mycarousel" data-slide-to="2"></li>
           </ol>
-          <a href="#mycarousel" role="button" data-slide="prev" class="carousel-control-prev">
+          <!-- We tell these buttons to: 
+            1. target mycarousel 
+            2. look like carousel buttons 
+            3. move the slide back/forward -->
+          <a href="#mycarousel" class="carousel-control-prev" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon"></span>
           </a>
-          <a href="#mycarousel" role="button" data-slide="next" class="carousel-control-next">
+          <a href="#mycarousel" class="carousel-control-next" role="button" data-slide="next">
             <span class="carousel-control-next-icon"></span>
           </a>
+          <div class="btn-group" id="carouselButton">
+            <button class="btn btn-danger btn-small" id="carousel-pause">
+              <span class="fa fa-pause"></span>
+            </button>
+            <button class="btn btn-danger btn-small" id="carousel-play">
+              <span class="fa fa-play"></span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -215,60 +303,6 @@
         </div>
       </div>
     </div>
-    <div class="row row-content align-items-center">
-      <div class="col-12 col-sm-8">
-        <div class="card" id="reservationCard">
-          <h2 class="card-header bg-warning text-white">Reserve a Table</h2>
-          <div class="card-body">
-            <form>
-              <div class="form-group row">
-                <label class="col-sm-3 col-form-label" for="inline-radios">Number of Guests</label>
-                <div class="col-sm-9" id="inline-radios">
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" name="inlineRadios" id="inlineRadio1" type="radio" value="1">
-                    <label class="form-check-label" for="inlineRadio1">1</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" name="inlineRadios" id="inlineRadio1" type="radio" value="2">
-                    <label class="form-check-label" for="inlineRadio1">2</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" name="inlineRadios" id="inlineRadio1" type="radio" value="3">
-                    <label class="form-check-label" for="inlineRadio1">3</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" name="inlineRadios" id="inlineRadio1" type="radio" value="4">
-                    <label class="form-check-label" for="inlineRadio1">4</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" name="inlineRadios" id="inlineRadio1" type="radio" value="5">
-                    <label class="form-check-label" for="inlineRadio1">5</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" name="inlineRadios" id="inlineRadio1" type="radio" value="6">
-                    <label class="form-check-label" for="inlineRadio1">6</label>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="dateandtime" class="col-sm-3 col-form-label">Date and Time</label>
-                <div class="col-sm-4">
-                  <input type="text" class="form-control" placeholder="Date"></input>
-                </div>
-                <div class="col-sm-4">
-                  <input type="text" class="form-control" placeholder="Time"></input>
-                </div>
-              </div>
-              <div class="form-group row">
-                <div class="offset-md-3 col-sm-10">
-                  <button type="submit" class="btn btn-primary">Reserve</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
   <footer>
@@ -319,10 +353,20 @@
   <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <!-- bootstrap javascript, i.e data-toggle etc uses jquery -->
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script>
-    $(document).ready(function () {
-      $('[data-toggle="tooltip"]').tooltip();
+    $(document).ready(function() {
+      $('#mycarousel').carousel({ interval: 2 });
+
+      $('#carousel-pause').click(function() {
+        $('#mycarousel').carousel('pause');
+      });
+
+      $('#carousel-play').click(function() {
+        $('#mycarousel').carousel('cycle');
+      });
+
     });
   </script>
 </body>
