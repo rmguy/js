@@ -184,7 +184,7 @@
   <div class="container">
     <div class="row row-content">
       <div class="col">
-        <div id="mycarousel" class="carousel slide" data-ride="carousel">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <!-- TODO: Why is this called role=listbox? -->
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
@@ -219,28 +219,23 @@
             </div>
           </div>
           <ol class="carousel-indicators">
-            <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#mycarousel" data-slide-to="1"></li>
-            <li data-target="#mycarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
           </ol>
           <!-- We tell these buttons to: 
-            1. target mycarousel 
+            1. target myCarousel 
             2. look like carousel buttons 
             3. move the slide back/forward -->
-          <a href="#mycarousel" class="carousel-control-prev" role="button" data-slide="prev">
+          <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon"></span>
           </a>
-          <a href="#mycarousel" class="carousel-control-next" role="button" data-slide="next">
+          <a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
             <span class="carousel-control-next-icon"></span>
           </a>
-          <div class="btn-group" id="carouselButton">
-            <button class="btn btn-danger btn-small" id="carousel-pause">
-              <span class="fa fa-pause"></span>
-            </button>
-            <button class="btn btn-danger btn-small" id="carousel-play">
-              <span class="fa fa-play"></span>
-            </button>
-          </div>
+          <button class="btn btn-danger btn-small" id="carouselButton">
+            <span class="fa fa-pause"></span>
+          </button>
         </div>
       </div>
     </div>
@@ -356,17 +351,21 @@
   <!-- bootstrap javascript, i.e data-toggle etc uses jquery -->
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script>
-    $(document).ready(function() {
-      $('#mycarousel').carousel({ interval: 2 });
+    $(document).ready(function () {
+      $('#myCarousel').carousel({ interval: 2 });
 
-      $('#carousel-pause').click(function() {
-        $('#mycarousel').carousel('pause');
+      $('#carouselButton').click(function () {
+        if ($('#carouselButton').children('span').hasClass('fa-pause')) {
+          $('#myCarousel').carousel('pause');
+          $('#carouselButton').children('span').removeClass('fa-pause');
+          $('#carouselButton').children('span').addClass('fa-play');
+        }
+        else if ($('#carouselButton').children('span').hasClass('fa-play')) {
+          $('#myCarousel').carousel('cycle');
+          $('#carouselButton').children('span').removeClass('fa-play');
+          $('#carouselButton').children('span').addClass('fa-pause');
+        }
       });
-
-      $('#carousel-play').click(function() {
-        $('#mycarousel').carousel('cycle');
-      });
-
     });
   </script>
 </body>
