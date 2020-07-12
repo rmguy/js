@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="container mixin-tester">
+    <div class="row">
+      <div class="col-sm-4" id="foo">
+        <span class="border border-primary">This is a test </span>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+<!-- bootstrap javascript, i.e data-toggle etc uses jquery -->
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#foo').click(function () {
+      $('#foo').children('span').removeClass('border-primary');
+      $('#foo').children('span').addClass('border-secondary');
+    });
+  });
+</script>
+
+</html>
