@@ -18,6 +18,8 @@
   padding: 70px 30px;
   background: #9575CD;
   color: floralwhite; }
+  .jumbotron .btn-warning {
+    color: floralwhite; }
 
 address {
   font-size: 80%;
@@ -46,6 +48,20 @@ body {
       top: 0;
       left: 0;
       min-height: 300px; }
+
+.modal .modal-header {
+  background-color: #512DAB;
+  color: floralwhite; }
+
+.modal .modal-body {
+  background-color: #D1C4E9; }
+
+.modal .close {
+  color: floralwhite;
+  border: 0px; }
+
+.modal .close:focus {
+  outline-color: #9575CD; }
 
 #carouselButton {
   right: 0px;
