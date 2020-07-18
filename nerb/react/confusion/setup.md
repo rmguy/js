@@ -25,4 +25,5 @@ $ yarn add bootstrap@4.0.0
 $ yarn add reactstrap@5.0.0 react-popper@0.9.2
 ```
 
-Configure vscode to set language as "Javascript React"
+* Configure vscode to set language as "Javascript React"
+* Install react-dev-tools browser extension
