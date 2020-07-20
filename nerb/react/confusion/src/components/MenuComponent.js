@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
+import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
 import DishDetail from './DishDetailComponent';
 
 class Menu extends Component {
@@ -48,9 +48,7 @@ class Menu extends Component {
         <div className="row">
           {menu}
         </div>
-        <div className="row">
-          <DishDetail selectedDish={this.state.selectedDish}/>
-        </div>
+        <DishDetail selectedDish={this.state.selectedDish} />
       </div>
     );
   }
