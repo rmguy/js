@@ -19,10 +19,10 @@ class DishDetail extends Component {
               <footer className="blockquote-footer">
                 {c.author}, {new Intl.DateTimeFormat(
                   'en-US', {
-                  month: 'long',
+                  month: 'short',
                   year: 'numeric',
-                  day: 'numeric'
-                }).format(new Date(c.date))
+                  day: '2-digit'
+                }).format(new Date(Date.parse(c.date)))
                 }
               </footer>
             </blockquote>
@@ -31,7 +31,7 @@ class DishDetail extends Component {
       });
 
       return (
-        <div className="col-12 col-md-6 m-1">
+        <div className="col-12 col-md-6 mt-1">
           <h4>Comments</h4>
           <ul className="list-unstyled">
             {displayComments}
@@ -49,17 +49,19 @@ class DishDetail extends Component {
   renderDish(dish) {
     if (dish != null) {
       return (
-        <div className="row">
-          <div className="col-12 col-md-6 mt-1">
-            <Card>
-              <CardImg width="100%" src={dish.image} alt={dish.name} />
-              <CardBody>
-                <CardTitle>{dish.name}</CardTitle>
-                <CardText>{dish.description}</CardText>
-              </CardBody>
-            </Card>
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-md-6 mt-1">
+              <Card>
+                <CardImg width="100%" src={dish.image} alt={dish.name} />
+                <CardBody>
+                  <CardTitle>{dish.name}</CardTitle>
+                  <CardText>{dish.description}</CardText>
+                </CardBody>
+              </Card>
+            </div>
+            {this.renderComments(this.props.selectedDish.comments)}
           </div>
-          {this.renderComments(this.props.selectedDish.comments)}
         </div>
       );
     }

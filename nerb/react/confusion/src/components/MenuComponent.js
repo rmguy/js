@@ -1,20 +1,12 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
-import DishDetail from './DishDetailComponent';
 
 class Menu extends Component {
 
   // Constructor usually contains a js object with component state
   constructor(props) {
     super(props);
-    this.state = {
-      selectedDish: null
-    }
     console.log('Menu component constructor')
-  }
-
-  onDishSelect(dish) {
-    this.setState({ selectedDish: dish });
   }
 
   componentDidMount() {
@@ -31,7 +23,7 @@ class Menu extends Component {
     const menu = this.props.dishes.map((dish) => {
       return (
         <div key={dish.id} className="col-12 col-md-6 mt-1">
-          <Card onClick={() => this.onDishSelect(dish)}>
+          <Card onClick={() => this.props.onClick(dish.id)}>
             <CardImg width="100%" src={dish.image} alt={dish.name}
             />
             <CardImgOverlay>
@@ -48,7 +40,6 @@ class Menu extends Component {
         <div className="row">
           {menu}
         </div>
-        <DishDetail selectedDish={this.state.selectedDish} />
       </div>
     );
   }

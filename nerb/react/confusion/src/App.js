@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand } from 'reactstrap';
-import Menu from './components/MenuComponent';
+import Main from './components/MainComponent';
 import './App.css';
-import { DISHES } from './shared/dishes';
 
 // React component
 // This whole thing is rendered by index.js as a single App component
@@ -24,26 +22,19 @@ import { DISHES } from './shared/dishes';
 //  - Different methods invoked by react during each stage
 //  - Mount: 
 //    * constructor, getDerivedStateFromProps, render, componentDidMount
-//   - Unpdating:
-//    * 
+//
+// Types of components:
+// - Presentational: rely on parent for app state. Only keep UI state 
+//   locally (i.e what's popped up). Contain markup.
+// - Container: Fetch data, track changes. Updating central state based on
+//   UI on screen. Wrap views returned by presentation components to .
+//   position.
 class App extends Component {
-
-  constructor(props) {
-    super(props)
-    this.state = {
-      dishes: DISHES
-    };
-  }
 
   render() {
     return (
       <div>
-        <Navbar dark color="primary">
-          <div className="container">
-            <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
-          </div>
-        </Navbar>
-        <Menu dishes={this.state.dishes}/>
+        <Main />
       </div>
     );
   }
