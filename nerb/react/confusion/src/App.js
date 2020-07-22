@@ -20,8 +20,12 @@ import './App.css';
 // Lifecycle: 
 //  - Mount, Updating (view update), Unmounting
 //  - Different methods invoked by react during each stage
-//  - Mount: 
-//    * constructor, getDerivedStateFromProps, render, componentDidMount
+//  - Rerendering happens when state changes. This triggers several 
+//    lifecycle method hooks in addition to render.
+//    * componentDidMount: component mounted into dom
+//    * shouldComponentUpdate: component never updates in lifecycle.
+//    * getSnapshotBeforeUpdate: remember scroll position
+//    * componentDidUpdate: invoked iff component updated (returning empty div doesn't count)
 //
 // Types of components:
 // - Presentational: rely on parent for app state. Only keep UI state 
@@ -29,6 +33,11 @@ import './App.css';
 // - Container: Fetch data, track changes. Updating central state based on
 //   UI on screen. Wrap views returned by presentation components to .
 //   position.
+//
+//  Functional components: 
+//  - Class components always return a view and often have local state. 
+//  - JS function that returns 1 or more js elements. Receives props. No lifecycle. No local state.
+//    * Presentational components good candidates for functional components.
 class App extends Component {
 
   render() {
